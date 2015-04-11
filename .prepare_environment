@@ -4,3 +4,5 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # NVM
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
 
+# Install XCode tools
+xcode-select --install

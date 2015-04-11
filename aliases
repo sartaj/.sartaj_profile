@@ -1,2 +1,5 @@
+# Defaults
 alias ls="ls -a"
+
+# Services
 alias serve="python -m SimpleHttpServer"
