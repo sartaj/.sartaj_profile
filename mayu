@@ -1,0 +1,3 @@
+LOCAL="/Users/sartaj"
+alias cdmayu="cd $LOCAL/clients/mayu/socraticmap/"
+
