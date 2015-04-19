@@ -2,4 +2,8 @@
 alias ls="ls -a"
 
 # Services
-alias serve="python -m SimpleHttpServer"
+# alias serve="python -m SimpleHTTPServer"
+alias serve="browser-sync start --server --files ./*.* --port"
+
+# Directory Shortcuts
+alias cdc="cd ~/clients"
