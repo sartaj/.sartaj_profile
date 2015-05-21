@@ -8,6 +8,8 @@ alias serve="browser-sync start --server --files ./*.* --port"
 # Directory Shortcuts
 alias cdc="cd ~/clients"
 
+alias gitclean="git pull; git fetch -p; git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+
 # Commands to encrypt/decrypt folders with ENCFS
  
 function unencrypt() { 
