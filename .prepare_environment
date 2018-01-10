@@ -6,7 +6,3 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
 
 # Install XCode tools
 xcode-select --install
-
-# Get Sublime Text Command Line
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
-
