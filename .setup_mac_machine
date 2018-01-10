@@ -1,14 +1,32 @@
 # Brew
+echo 'Installing Brew'
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # NVM
+echo 'Installing NVM'
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
 
 # Node
+echo 'Installing Node'
 nvm install node --reinstall-packages-from=node
 
 # Yarn
+echo 'Installing Yarn'
 brew install yarn
 
 # Install XCode tools
+echo 'Installing XCode Tools'
 xcode-select --install
+
+# Quick Look Plugins (from https://github.com/sindresorhus/quick-look-plugins)
+echo 'Installing Quick Look Plugins'
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+
+# Installing recommended Brew Packages
+echo 'Installing recommended Brew Packages'
+brew install tree
+brew install wget
+brew install graphicsmagick
+
+# Install Global Node Packages
+yarn global add http-server trash-cli rename-cli cli-github
