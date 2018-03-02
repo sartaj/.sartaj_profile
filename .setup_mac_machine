@@ -12,7 +12,7 @@ nvm install node --reinstall-packages-from=node
 
 # Yarn
 echo 'Installing Yarn'
-brew install yarn
+brew install yarn --without-node
 
 # Install XCode tools
 echo 'Installing XCode Tools'
