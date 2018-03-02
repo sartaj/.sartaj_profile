@@ -14,13 +14,13 @@ nvm install node --reinstall-packages-from=node
 echo 'Installing Yarn'
 brew install yarn --without-node
 
-# Install XCode tools
-echo 'Installing XCode Tools'
-xcode-select --install
-
 # Zsh
 echo 'Installing Zsh'
 brew install zsh zsh-completions
+
+# Install XCode tools
+echo 'Installing XCode Tools'
+xcode-select --install
 
 # Quick Look Plugins (from https://github.com/sindresorhus/quick-look-plugins)
 echo 'Installing Quick Look Plugins'
@@ -33,4 +33,4 @@ brew install wget
 brew install graphicsmagick
 
 # Install Global Node Packages
-yarn global add http-server trash-cli rename-cli cli-github lock-cli
+yarn global add http-server trash-cli rename-cli cli-github lock-cli rimraf
