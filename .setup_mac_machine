@@ -18,6 +18,10 @@ brew install yarn
 echo 'Installing XCode Tools'
 xcode-select --install
 
+# Zsh
+echo 'Installing Zsh'
+brew install zsh zsh-completions
+
 # Quick Look Plugins (from https://github.com/sindresorhus/quick-look-plugins)
 echo 'Installing Quick Look Plugins'
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
