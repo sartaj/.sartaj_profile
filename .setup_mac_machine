@@ -2,6 +2,10 @@
 echo 'Installing Brew'
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Zsh
+echo 'Installing Zsh'
+brew install zsh zsh-completions
+
 # NVM
 echo 'Installing NVM'
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
@@ -13,10 +17,6 @@ nvm install node --reinstall-packages-from=node
 # Yarn
 echo 'Installing Yarn'
 brew install yarn --without-node
-
-# Zsh
-echo 'Installing Zsh'
-brew install zsh zsh-completions
 
 # Install XCode tools
 echo 'Installing XCode Tools'
