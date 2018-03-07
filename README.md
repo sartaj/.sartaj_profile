@@ -12,7 +12,9 @@ Git clone to User home directory, i.e. `~`.
 
 ### Machine Setup
 
-Run `~/.sartaj_profile/.setup_mac_machine`
+Copy and paste this to your terminal: 
+
+`curl https://raw.githubusercontent.com/sartaj/.sartaj_profile/master/.setup_mac_machine | bash`
 
 This will install a number of things, including XCode tools and nvm for Node.
 
