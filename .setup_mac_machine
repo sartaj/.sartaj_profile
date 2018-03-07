@@ -34,3 +34,5 @@ brew install graphicsmagick
 
 # Install Global Node Packages
 yarn global add http-server trash-cli rename-cli cli-github lock-cli rimraf
+
+defaults write com.apple.finder AppleShowAllFiles YES
