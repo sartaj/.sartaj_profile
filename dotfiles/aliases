@@ -2,10 +2,7 @@
 alias ls="ls -a"
 
 # Services
-# alias serve="python -m SimpleHTTPServer"
 alias serve="browser-sync start --server --files ./*.* --port"
 
-# Directory Shortcuts
-alias cdc="cd ~/clients"
-
+# Git Aliases
 alias gitclean="git pull; git fetch -p; git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"

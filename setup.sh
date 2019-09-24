@@ -1,0 +1,1 @@
+source core/part1.sh

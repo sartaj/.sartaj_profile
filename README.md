@@ -2,13 +2,12 @@
 
 ## Goals
 
-Scripts to set up my dev environment on Mac machines.
+Set up mac environmnent
 
 ## Usage
 
 ### Cloning 
-
-Git clone to User home directory, i.e. `~`.
+`cd; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source setup/part1.sh`
 
 ### Machine Setup
 

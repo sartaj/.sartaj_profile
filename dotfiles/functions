@@ -20,3 +20,8 @@ function encrypt() {
 	umount "$DIR"/"$@";
 
 }
+
+function newwindow() {
+	local str="'tell application \"iTerm\" to do script \"${@%}\"'";
+	echo $str | xargs osascript -e;
+}

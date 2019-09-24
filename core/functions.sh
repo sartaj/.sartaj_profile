@@ -1,0 +1,27 @@
+# Commands to encrypt/decrypt folders with ENCFS
+ 
+function unencrypt() { 
+
+	# http://stackoverflow.com/a/17123575
+	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+
+	# http://emmanuelbernard.com/blog/2013/07/01/encrypt-your-dropbox-with-encfs-on-mac-os-x/
+	# WARNING: only add files after folder is mounted. Files before folder is mounted won't work.
+	# First one is encrypted folder, second is public mountable folder.
+	encfs "$DIR"/.encfs_"$@" "$DIR"/"$@";
+
+}
+
+function encrypt() { 
+
+	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+
+	# Use unmount to hide mounted folder.
+	umount "$DIR"/"$@";
+
+}
+
+function newwindow() {
+	local str="'tell application \"Terminal\" to do script \"${@%}\"'";
+	echo $str | xargs osascript -e;
+}
