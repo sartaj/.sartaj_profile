@@ -1,13 +1,22 @@
 # .sartaj_profile
 
-## Goals
-
 Set up mac environmnent
 
-## Usage
+## Command Install 
 
-### 1 Command Install 
-`cd ~; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source ~/.sartaj_profile/setup.sh`
+### Step 1
+```bash
+cd ~; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source ~/.sartaj_profile/setup.sh
+```
+
+### Step 2
+After logging into Mac App Store, run the following
+
+`bash ~/.sartaj_profile/setup/step2.sh`
+
+### Step 3
+
+`bash ~/.sartaj_profile/setup/step3.sh`
 
 ### Configuration
 
