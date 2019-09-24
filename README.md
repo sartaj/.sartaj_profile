@@ -6,14 +6,12 @@ Set up mac environmnent
 
 ## Usage
 
-### Cloning 
-`cd; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source setup/part1.sh`
+### 1 Command Install 
+`cd ~; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source ~/.sartaj_profile/setup.sh`
 
-### Machine Setup
+### Configuration
 
-Run `~/.sartaj_profile/.setup_mac_machine`
-
-This will install a number of things, including XCode tools and nvm for Node.
+The `apps-and-preferences` folder are where you can change apps.
 
 ### Shell Setup
 
