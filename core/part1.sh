@@ -2,7 +2,7 @@ echo 'Setting OS Preferences'
 source ../apps-and-preferences/macos_preferences.sh
 
 echo 'Installing Core Dev Tools'
-source ./core-dev-tools.sh
+source ./download-cli-package-managers.sh
 
 echo 'First Install Complete. Please Do The Following'
 echo 'sudo xcodebuild -license accept'
