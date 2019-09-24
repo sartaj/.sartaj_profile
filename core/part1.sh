@@ -1,5 +1,5 @@
 echo 'Setting OS Preferences'
-source ../macos_preferences.sh
+source ../apps-and-preferences/macos_preferences.sh
 
 echo 'Installing Core Dev Tools'
 source ./core-dev-tools.sh
