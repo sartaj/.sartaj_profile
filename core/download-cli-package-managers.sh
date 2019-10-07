@@ -8,7 +8,8 @@ fi
 if ! [ -x "$(command -v zsh)" ]; then
   echo 'Installing Zsh'
   brew install zsh zsh-completions
-  echo "source ~/.sartaj_profile/.index" > ~/.zshrc
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  yes | cp -rf ./rc-files/{.bash_profile,.profile,.zshrc} ~/
 fi
 
 # Node

@@ -45,7 +45,10 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # System Preferences > Trackpad > Tap to click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
-# Right Click
+# System Preferences > Mouse > Secondary click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick 1
+
+# System Preferences > Mouse > Secondary click
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -65,17 +68,14 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Finder > Preferences > Show warning before changing an extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Finder > Preferences > Show warning before removing from iCloud Drive
-defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -bool false
-
 # Finder > View > As List
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Finder > View > Show Path Bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Show Hidden File
-defaults write com.apple.finder AppleShowAllFiles YES
+# Finder > Show Hidden Files
+defaults write com.apple.finder AppleShowAllFiles 1
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
