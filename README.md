@@ -1,19 +1,26 @@
 # .sartaj_profile
 
-## Goals
-
 Set up mac environmnent
 
-## Usage
+## Command Install 
 
-### Cloning 
-`cd; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source setup/part1.sh`
+### Step 1
+```bash
+cd ~; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source ~/.sartaj_profile/setup.sh
+```
 
-### Machine Setup
+### Step 2
+After logging into Mac App Store, run the following
 
-Run `~/.sartaj_profile/.setup_mac_machine`
+`bash ~/.sartaj_profile/setup/step2.sh`
 
-This will install a number of things, including XCode tools and nvm for Node.
+### Step 3
+
+`bash ~/.sartaj_profile/setup/step3.sh`
+
+### Configuration
+
+The `apps-and-preferences` folder are where you can change apps.
 
 ### Shell Setup
 
