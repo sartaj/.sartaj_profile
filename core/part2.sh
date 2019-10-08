@@ -1,3 +1,6 @@
-source ./functions.sh
-source ../apps-and-preferences/apps.sh
-echo 'open a  new window and run "source setup_part3.sh"'
+SOURCE=${(%):-%N}
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+source $DIR/functions.sh
+source $DIR/../apps-and-preferences/apps.sh
+echo 'DONE!'

@@ -1,7 +1,9 @@
+yes | cp -rf ./rc-files/{.bash_profile,.profile,.zshrc} ~/
+
 # Brew
-if ! [ -x "$(command -v git)" ]; then
+if ! [ -x "$(command -v brew)" ]; then
   echo 'Installing Brew'
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  git clone --depth=1 https://github.com/Homebrew/brew ~/.brew
 fi
 
 # Zsh
@@ -9,7 +11,7 @@ if ! [ -x "$(command -v zsh)" ]; then
   echo 'Installing Zsh'
   brew install zsh zsh-completions
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  yes | cp -rf ./rc-files/{.bash_profile,.profile,.zshrc} ~/
+
 fi
 
 # Node
@@ -18,8 +20,9 @@ if ! [ -x "$(command -v n)" ]; then
   curl -L https://git.io/n-install | bash
 fi
 
+yes | cp -rf ./rc-files/{.bash_profile,.profile,.zshrc} ~/
+source ~/.bash_profile 
+
 # Install Mac App Store CLI
 brew install mas
 
-# Install XCode Select
-xcode-select --install
