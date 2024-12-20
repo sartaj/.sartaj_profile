@@ -45,7 +45,7 @@ After running the script:
 
 ## Requirements
 
-- macOS (Apple Silicon or Intel)
+- macOS (Apple Silicon)
 - Administrator privileges (for installing system packages)
 - Internet connection
 
