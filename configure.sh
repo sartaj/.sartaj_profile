@@ -394,19 +394,36 @@ print_section "Setting up Ollama"
 # Install Ollama if not present
 if ! command_exists ollama; then
     print_info "Installing Ollama..."
-    if brew install ollama; then
-        print_info "Starting Ollama service..."
-        print_success "Ollama installed successfully"
-    else
-        print_error "Failed to install Ollama"
-        exit 1
-    fi
+    
+    # Create temporary directory for download
+    TEMP_DIR="$HOME/Library/Application Support/macos-profile/tmp"
+    mkdir -p "$TEMP_DIR"
+    
+    # Download and install Ollama
+    OLLAMA_DMG="$TEMP_DIR/Ollama.dmg"
+    curl -L -o "$OLLAMA_DMG" "https://ollama.ai/download/Ollama.dmg"
+    
+    print_info "Mounting Ollama DMG..."
+    hdiutil attach "$OLLAMA_DMG" -nobrowse
+    
+    print_info "Installing Ollama..."
+    # Create Applications directory if it doesn't exist
+    mkdir -p "$HOME/Applications"
+    cp -R "/Volumes/Ollama/Ollama.app" "$HOME/Applications/"
+    
+    print_info "Cleaning up..."
+    hdiutil detach "/Volumes/Ollama"
+    rm -f "$OLLAMA_DMG"
+    
+    print_info "Launching Ollama..."
+    open "$HOME/Applications/Ollama.app"
+    
+    print_success "Ollama installed successfully"
 else
     print_info "Ollama already installed"
 fi
-# Start Ollama as a service
-brew services start ollama
-# Wait for Ollama to start
+
+# Wait for Ollama to initialize
 sleep 5
 
 echo ""
