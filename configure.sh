@@ -48,7 +48,7 @@ print_error() {
 # Function to add content to local zprofile
 append_to_profile() {
     local content="$1"
-    local profile_path="$HOME/.sartaj-macos-profile/.zprofile"
+    local profile_path="$HOME/.zprofile"
     echo "$content" >> "$profile_path"
 }
 
