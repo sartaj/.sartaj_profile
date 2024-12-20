@@ -58,31 +58,13 @@ append_to_profile() {
 
 print_section "Setting up Profile Environment"
 
-# Create local profile directory if it doesn't exist
-mkdir -p "$HOME/.sartaj-macos-profile"
-
 # Always start with a fresh .zprofile
 print_info "Initializing profile configuration..."
-cat > "$HOME/.sartaj-macos-profile/.zprofile" << 'EOF'
+cat > "$HOME/.zprofile" << 'EOF'
 # Sartaj's macOS Profile Configuration
 # This file is managed by setup-mac.sh
 # Last updated: $(date)
 
-# Initialize PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
-# Homebrew configuration
-eval "$(/opt/homebrew/bin/brew shellenv)"
-EOF
-
-# Create or update the main .zprofile with a warning header
-print_info "Configuring main profile to source local profile..."
-cat > "$HOME/.zprofile" << 'EOF'
-# ⚠️  WARNING: This file is managed by setup-mac.sh
-# ⚠️  Any manual changes will be overwritten
-# ⚠️  Last updated: $(date)
-
-[ -f "$HOME/.sartaj-macos-profile/.zprofile" ] && source "$HOME/.sartaj-macos-profile/.zprofile"
 EOF
 
 print_success "Profile environment initialized"
