@@ -1,7 +1,0 @@
-# Defaults
-alias ls="ls -a"
-
-# Git Aliases
-git config --global alias.branch-clean '! git pull; git fetch -p; git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
-git config --global alias.update '! update() { git commit -a -m "${1:-'update'}" && git push ; } ; update'
-git config --global alias.set-upstream '!git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)'

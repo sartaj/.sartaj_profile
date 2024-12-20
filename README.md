@@ -1,31 +1,54 @@
-# .sartaj_profile
+# macOS Development Environment Setup
 
-Set up mac environmnent
+Automated idempotent setup script for macOS development environment. This script installs and configures essential development tools, programming languages, and applications commonly used in software development.
 
-## Command Install 
-
-### Step 1
-```bash
-cd ~; curl -#L https://github.com/sartaj/.sartaj_profile/tarball/master | tar -xzv --strip-components 1; source ~/.sartaj_profile/setup.sh
-```
-
-### Step 2
-After logging into Mac App Store, run the following
-
-`bash ~/.sartaj_profile/setup/step2.sh`
-
-### Step 3
-
-`bash ~/.sartaj_profile/setup/step3.sh`
-
-### Configuration
-
-The `apps-and-preferences` folder are where you can change apps.
-
-### Shell Setup
-
-In shell profile (`.bash_profile`, `.zshrc`), add the following:
+## Quick Install
 
 ```bash
-source ~/.sartaj_profile/.index
+curl -O https://raw.githubusercontent.com/sartaj/.sartaj_profile/master/configure.sh && bash configure.sh
 ```
+
+## What Gets Installed
+
+The script sets up the following:
+
+### System Configuration
+- macOS system preferences (Finder, keyboard, mouse settings)
+- Rosetta 2 (for Apple Silicon Macs)
+- XCode Command Line Tools
+
+### Development Tools
+- Homebrew (package manager)
+- GitHub CLI
+- Oh My Zsh (shell configuration)
+
+### Programming Languages & Environments
+- Python (via Miniconda and Pyenv)
+- Node.js (via NVM)
+- Go
+- Docker Desktop
+- Ollama (AI model runner)
+
+## Shell Configuration
+
+Warning: The shell overrides ~/.zprofile.
+
+No manual configuration is needed - the script handles all environment setup automatically.
+
+## Post-Installation
+
+After running the script:
+
+1. Restart your terminal for all changes to take effect
+2. Launch Docker Desktop manually (if installed)
+3. Configure GitHub CLI by running `gh auth login`
+
+## Requirements
+
+- macOS (Apple Silicon or Intel)
+- Administrator privileges (for installing system packages)
+- Internet connection
+
+## Customization
+
+You can modify the `configure.sh` script directly to customize which tools and configurations are installed.

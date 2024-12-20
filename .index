@@ -1,2 +1,0 @@
-# source: http://stackoverflow.com/a/1423444
-for f in ~/.sartaj_profile/dotfiles/*; do source $f; done
